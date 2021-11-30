@@ -6,18 +6,18 @@
 /*   By: jroux-fo <jroux-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 01:25:29 by jroux-fo          #+#    #+#             */
-/*   Updated: 2021/10/19 01:02:24 by jroux-fo         ###   ########.fr       */
+/*   Updated: 2021/11/23 16:53:01 by jroux-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (s[i] != c)
-        i++;
-    return ((char *)s + i);
+	i = 0;
+	while (s[i] != c)
+		i++;
+	return ((char *)s + i);
 }

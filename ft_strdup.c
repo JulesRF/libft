@@ -5,29 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jroux-fo <jroux-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/19 01:08:12 by jroux-fo          #+#    #+#             */
-/*   Updated: 2021/10/19 01:30:06 by jroux-fo         ###   ########.fr       */
+/*   Created: 2021/11/24 13:08:31 by jroux-fo          #+#    #+#             */
+/*   Updated: 2021/11/26 17:34:46 by jroux-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s1)
 {
-    int i;
-    char *dest;
+	char	*dest;
+	int		i;
 
-    i = 0;
-    while (s[i])
-        i++;
-    dest = malloc(sizeof(char) * i + 1);
-    i = 0;
-    while(s[i])
-    {
-        dest[i] = s[i];
-        i++;
-    }
-    dest[i] = '\0';
-    return (dest);
+	i = 0;
+	while (s1[i])
+		i++;
+	dest = malloc(sizeof(char) * i + 1);
+	i = 0;
+	while (s1[i])
+	{
+		dest[i] = s1[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }

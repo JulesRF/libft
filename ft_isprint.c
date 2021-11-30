@@ -6,15 +6,15 @@
 /*   By: jroux-fo <jroux-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 02:14:29 by jroux-fo          #+#    #+#             */
-/*   Updated: 2021/10/19 00:59:33 by jroux-fo         ###   ########.fr       */
+/*   Updated: 2021/11/23 16:53:48 by jroux-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if(c <= 126 && c >= 32)
-        return (16384);
-    return (0);
+	if (c <= 126 && c >= 32)
+		return (16384);
+	return (0);
 }

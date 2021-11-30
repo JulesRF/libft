@@ -5,59 +5,37 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jroux-fo <jroux-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/14 03:20:36 by jroux-fo          #+#    #+#             */
-/*   Updated: 2021/10/19 01:02:19 by jroux-fo         ###   ########.fr       */
+/*   Created: 2021/11/23 17:12:15 by jroux-fo          #+#    #+#             */
+/*   Updated: 2021/11/24 14:04:03 by jroux-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strlen(const char *s)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-    int i;
+	size_t	i;
+	size_t	j;
+	int		stop;
 
-    i = 0;
-    while (s[i])
-        i++;
-    return (i);
-}
-
-char *ft_strnstr(const char	*big, const char *little, int len)
-{
-    int i;
-    int j;
-    int count;
-
-    i = 0;
-    j = 0;
-    count = 0;
-    if (!little)
-        return ((char *) big);
-    while (big[i])
-    {
-        if (big[i] == little[j])
-        {
-            while (big[i] == little[j])
-            {
-                count++;
-                j++;
-            }
-            if (count == len || count == ft_strlen(little))
-                return ((char *) little + i);
-            else
-                count = 0;
-            j++;
-        }
-        else
-            j++;
-        i++;
-    }
-}
-
-#include <stdio.h>
-#include <string.h>
-
-int main()
-{
-    printf("%s\n", strnstr("Salut conar", "Salut", 3));
+	i = 0;
+	j = 0;
+	while (haystack[i] && i < len)
+	{
+		if (haystack[i] == needle[j])
+		{
+			stop = i;
+			while (haystack[i] == needle[j] && i < len)
+			{
+				j++;
+				i++;
+			}
+			if (j == ft_strlen(needle))
+				return ((char *)haystack + stop);
+			j = 0;
+			i = stop;
+		}
+		i++;
+	}
+	return (0);
 }

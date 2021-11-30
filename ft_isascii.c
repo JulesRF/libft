@@ -6,13 +6,15 @@
 /*   By: jroux-fo <jroux-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 02:05:55 by jroux-fo          #+#    #+#             */
-/*   Updated: 2021/10/11 02:13:47 by jroux-fo         ###   ########.fr       */
+/*   Updated: 2021/11/24 11:32:43 by jroux-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+#include "libft.h"
+
+int	ft_isascii(int c)
 {
-    if(c <= 127 && c >= 0)
-        return (1);
-    return (0);
+	if (c <= 127 && c >= 0)
+		return (1);
+	return (0);
 }

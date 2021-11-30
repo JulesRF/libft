@@ -6,13 +6,15 @@
 /*   By: jroux-fo <jroux-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 01:46:09 by jroux-fo          #+#    #+#             */
-/*   Updated: 2021/10/11 01:50:50 by jroux-fo         ###   ########.fr       */
+/*   Updated: 2021/11/24 11:32:46 by jroux-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+#include "libft.h"
+
+int	ft_isdigit(int c)
 {
-    if (c <= '9' && c >= '0')
-        return (1);
-    return (0);   
+	if (c <= '9' && c >= '0')
+		return (1);
+	return (0);
 }

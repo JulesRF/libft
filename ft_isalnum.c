@@ -6,15 +6,17 @@
 /*   By: jroux-fo <jroux-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 01:56:50 by jroux-fo          #+#    #+#             */
-/*   Updated: 2021/10/11 02:07:19 by jroux-fo         ###   ########.fr       */
+/*   Updated: 2021/11/24 13:17:50 by jroux-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum(int c)
+#include "libft.h"
+
+int	ft_isalnum(int c)
 {
     if ((c <= 'z' && c >= 'a') || (c <= 'Z' && c >= 'A'))
-        return (8);
-    if (c <= '9' && c >= '0')
-        return (8);
-    return (0);
+		return (8);
+	if (c <= '9' && c >= '0')
+		return (8);
+	return (0);
 }
