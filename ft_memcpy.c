@@ -6,7 +6,7 @@
 /*   By: jroux-fo <jroux-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 11:16:40 by jroux-fo          #+#    #+#             */
-/*   Updated: 2021/11/25 11:55:14 by jroux-fo         ###   ########.fr       */
+/*   Updated: 2021/11/30 17:04:27 by jroux-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char	*dest;
 	unsigned char	*source;
 
+	if (!dst && !src)
+		return (NULL);
 	dest = (unsigned char *)dst;
 	source = (unsigned char *)src;
 	i = 0;

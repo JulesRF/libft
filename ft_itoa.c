@@ -6,7 +6,7 @@
 /*   By: jroux-fo <jroux-fo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 11:33:47 by jroux-fo          #+#    #+#             */
-/*   Updated: 2021/11/30 10:13:31 by jroux-fo         ###   ########.fr       */
+/*   Updated: 2021/12/03 15:26:42 by jroux-fo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,30 +20,30 @@ static int	ft_count(int n)
 	while (n >= 10)
 	{
 		n = n / 10;
-		count ++;
+		count++;
 	}
 	return (count);
 }
 
-static char	*ft_rev(char *str, int size)
+static char	*ft_rev(char *str, int size, int moins, int i)
 {
-	int		i;
 	int		j;
-	char	*temp;
+	char	temp;
 
+	if (moins == 1)
+		str[i] = 45;
 	i = 0;
-	j = size;
-	temp = malloc(sizeof(char) * size + 1);
-	if (!temp)
-		return (NULL);
-	while (i < size)
+	j = size - 1;
+	while (i < j)
 	{
-		temp[i] = str[j - 1];
+		temp = str[i];
+		str[i] = str[j];
+		str[j] = temp;
 		i++;
 		j--;
 	}
-	temp[i] = '\0';
-	return (temp);
+	str[size] = '\0';
+	return (str);
 }
 
 char	*ft_itoa(int n)
@@ -55,6 +55,8 @@ char	*ft_itoa(int n)
 
 	i = 0;
 	moins = 0;
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	if (n < 0)
 	{
 		moins = 1;
@@ -66,11 +68,8 @@ char	*ft_itoa(int n)
 		return (NULL);
 	while (i < size - moins)
 	{
-		dest[i++] = n % 10 * moins + 48;
+		dest[i++] = n % 10 + 48;
 		n = n / 10;
 	}
-	if (moins == 1)
-		dest[i++] = 45;
-	dest[i] = '\0';
-	return (ft_rev(dest, size));
+	return (ft_rev(dest, size, moins, i));
 }

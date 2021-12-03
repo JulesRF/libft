@@ -6,7 +6,7 @@
 #    By: jroux-fo <jroux-fo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/29 15:30:45 by jroux-fo          #+#    #+#              #
-#    Updated: 2021/11/29 15:30:46 by jroux-fo         ###   ########.fr        #
+#    Updated: 2021/12/03 16:15:07 by jroux-fo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ SRCS_FILES =		ft_memset.c \
 				ft_atoi.c \
 				ft_calloc.c \
 				ft_strdup.c \
+				ft_striteri.c \
 				ft_strdup.c \
 				ft_substr.c \
 				ft_strjoin.c \
@@ -108,4 +109,4 @@ fclean:		clean
 
 re :		fclean all
 
-.PHONY:		all clean fclean re
+.PHONY:		all clean fclean re bonus
