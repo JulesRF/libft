@@ -94,7 +94,7 @@ all		:	$(NAME)
 $(NAME)		:	$(OBJS_FILES) $(HEADER)
 			ar rc $(NAME) $(OBJS_FILES)
 
-%o		:	%.c
+%.o		:	%.c
 			$(CC) $(FLAGS) $(HEADER_FILES) -c $< -o $@
 
 
